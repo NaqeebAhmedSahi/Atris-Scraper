@@ -73,7 +73,7 @@ def scrape_links_and_save_to_excel(category_name):
     print("Initializing Chrome driver...")
     options = uc.ChromeOptions()
     options.add_argument("--start-maximized")
-    driver = uc.Chrome(options=options)
+    driver = uc.Chrome(version_main=138, options=options)
 
     scraped_links_file = f"scraped_links_{category_name}.txt"
     scraped_links = read_scraped_links(scraped_links_file)
